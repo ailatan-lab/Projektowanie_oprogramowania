@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{209D6A22-D50C-40F1-87F4-58D4828D05F7}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>projopr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files\MySQL\MySQL Server 8.0\include</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Program Files\MySQL\MySQL Server 8.0\include</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 1.1\include;C:\Program Files\MySQL\MySQL Server 8.0\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mysqlcppconn.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 1.1\lib\opt;C:\Program Files\MySQL\MySQL Server 8.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 1.1\include;C:\Program Files\MySQL\MySQL Server 8.0\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mysqlcppconn.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 1.1\lib\opt;C:\Program Files\MySQL\MySQL Server 8.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lista_przypisanych_pac.cpp" />
+    <ClCompile Include="lista_upowaznionych.cpp" />
+    <ClCompile Include="MyUserControl.cpp" />
+    <ClCompile Include="pacjenci_doktora.cpp" />
+    <ClCompile Include="pliki_pac.cpp" />
+    <ClCompile Include="rejestracja_doktor.cpp" />
+    <ClCompile Include="rejestracja_pacjent.cpp" />
+    <ClCompile Include="rejestracja_upowazniony.cpp" />
+    <ClCompile Include="start_programu.cpp" />
+    <ClCompile Include="upowaznieni_przypisani.cpp" />
+    <ClCompile Include="Zalogowany_doktor.cpp" />
+    <ClCompile Include="Zalogowany_pacjent.cpp" />
+    <ClCompile Include="Zalogowany_upowazniony.cpp" />
+    <ClCompile Include="zaloguj.cpp" />
+    <ClCompile Include="zarejestruj.cpp" />
+    <ClCompile Include="zmiana_hasla.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lista_przypisanych_pac.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="lista_upowaznionych.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyUserControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="pacjenci_doktora.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="pliki_pac.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="rejestracja_doktor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="rejestracja_pacjent.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="rejestracja_upowazniony.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="sql_manager.h" />
+    <ClInclude Include="start_programu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="upowaznieni_przypisani.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Zalogowany_doktor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Zalogowany_pacjent.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Zalogowany_upowazniony.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="zaloguj.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="zarejestruj.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="zmiana_hasla.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="lista_przypisanych_pac.resx">
+      <DependentUpon>lista_przypisanych_pac.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lista_upowaznionych.resx">
+      <DependentUpon>lista_upowaznionych.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pacjenci_doktora.resx">
+      <DependentUpon>pacjenci_doktora.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pliki_pac.resx">
+      <DependentUpon>pliki_pac.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rejestracja_doktor.resx">
+      <DependentUpon>rejestracja_doktor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rejestracja_pacjent.resx">
+      <DependentUpon>rejestracja_pacjent.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rejestracja_upowazniony.resx">
+      <DependentUpon>rejestracja_upowazniony.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start_programu.resx">
+      <DependentUpon>start_programu.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upowaznieni_przypisani.resx">
+      <DependentUpon>upowaznieni_przypisani.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zalogowany_doktor.resx">
+      <DependentUpon>Zalogowany_doktor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zalogowany_pacjent.resx">
+      <DependentUpon>Zalogowany_pacjent.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zalogowany_upowazniony.resx">
+      <DependentUpon>Zalogowany_upowazniony.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zaloguj.resx">
+      <DependentUpon>zaloguj.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zarejestruj.resx">
+      <DependentUpon>zarejestruj.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zmiana_hasla.resx">
+      <DependentUpon>zmiana_hasla.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
